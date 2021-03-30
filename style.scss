@@ -12,7 +12,7 @@ $font_first: url("fonts/HelveticaRoundedLTStd-Bd.otf");
 	padding: 0;
 }
 body {
-	background-color: $body_color;
+	background-color: rgba(136, 136, 136, 0.88);
 }
 #all {
 	width: 80%;
@@ -33,6 +33,9 @@ body {
 	display: flex;
 	justify-content: space-between;
 	padding: 0 50px;
+    a {
+        text-decoration: none;
+    }
 	.but-qu {
 		width: 150px;
 		height: 80px;
@@ -48,7 +51,7 @@ body {
 	.but-qu:hover {
 		background-color: $color_div_q;
 		color: black;
-        border: 1px solid black;
+		border: 1px solid black;
 	}
 	#but-left {
 		clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
@@ -92,7 +95,7 @@ body {
 	height: 100px;
 	display: flex;
 	justify-content: space-around;
-	padding-top: 15px;
+	padding-top: 20px;
 }
 p {
 	font-family: Myfont;
@@ -107,7 +110,7 @@ p {
 #footerr {
 	width: 100%;
 	height: 50px;
-	background-color: darkgray;
+	background-color: #4d4d4d;
 	color: #fff;
 	p {
 		text-align: center;
@@ -116,10 +119,68 @@ p {
 		font-weight: bold;
 	}
 }
+
+#all-cont {
+	background-color: #fff;
+	width: 30%;
+	height: 450px;
+	margin: 0 auto;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+	transform: translateY(100px);
+	#div-info-login {
+		width: 100%;
+		height: 80%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		h2 {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		input {
+			width: 175px;
+			height: 30px;
+		}
+		#label-text {
+			font-family: roboto;
+		}
+        a {
+                text-decoration: none;
+        }
+		#Entre {
+			width: 150px;
+			height: 60px;
+			cursor: pointer;
+            border: none;
+            background-color: rgb(43, 43, 43);
+            color: white;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            padding-right: 16px;
+			clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+		}
+        #Entre:hover {
+            background-color: darkgray;
+		color: black;
+        }
+	}
+}
+
 @media screen and (max-width: 500px) {
-    .div-center {
-        height: 430px;
+    #all-cont {
+        width: 79%;
+        height: 350px;
+        #div-info-login {
+            height: 75%;
+        }
     }
+	.div-center {
+		height: 430px;
+	}
 	.divbut .but-qu {
 		font-size: 10px;
 		width: 70px;

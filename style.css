@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: rgba(221, 221, 221, 0.527);
+  background-color: rgba(136, 136, 136, 0.88);
 }
 
 #all {
@@ -48,6 +48,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 50px;
+}
+
+.divbut a {
+  text-decoration: none;
 }
 
 .divbut .but-qu {
@@ -146,7 +150,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-top: 15px;
+  padding-top: 20px;
 }
 
 p {
@@ -165,7 +169,7 @@ p {
 #footerr {
   width: 100%;
   height: 50px;
-  background-color: darkgray;
+  background-color: #4d4d4d;
   color: #fff;
 }
 
@@ -176,7 +180,89 @@ p {
   font-weight: bold;
 }
 
+#all-cont {
+  background-color: #fff;
+  width: 30%;
+  height: 450px;
+  margin: 0 auto;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+#all-cont #div-info-login {
+  width: 100%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#all-cont #div-info-login h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#all-cont #div-info-login input {
+  width: 175px;
+  height: 30px;
+}
+
+#all-cont #div-info-login #label-text {
+  font-family: roboto;
+}
+
+#all-cont #div-info-login a {
+  text-decoration: none;
+}
+
+#all-cont #div-info-login #Entre {
+  width: 150px;
+  height: 60px;
+  cursor: pointer;
+  border: none;
+  background-color: #2b2b2b;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  padding-right: 16px;
+  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+          clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+
+#all-cont #div-info-login #Entre:hover {
+  background-color: darkgray;
+  color: black;
+}
+
 @media screen and (max-width: 500px) {
+  #all-cont {
+    width: 79%;
+    height: 350px;
+  }
+  #all-cont #div-info-login {
+    height: 75%;
+  }
   .div-center {
     height: 430px;
   }
