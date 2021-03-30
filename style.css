@@ -1,0 +1,221 @@
+@font-face {
+  font-family: Myfont;
+  src: url("fonts/HelveticaRoundedLTStd-Bd.otf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(221, 221, 221, 0.527);
+}
+
+#all {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+#all-quition {
+  width: 100%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.divbut {
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 50px;
+}
+
+.divbut .but-qu {
+  width: 150px;
+  height: 80px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+}
+
+.divbut .but-qu:hover {
+  background-color: rgba(196, 196, 196, 0.6);
+  color: black;
+  border: 1px solid black;
+}
+
+.divbut #but-left {
+  -webkit-clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+          clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}
+
+.divbut #but-right {
+  padding-right: 8px;
+  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+          clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+
+.div-center {
+  width: 100%;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#quition-text {
+  font-size: 35px;
+  width: 80%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.div-qu {
+  background-color: rgba(196, 196, 196, 0.6);
+  width: 60%;
+  height: 80px;
+  border-radius: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.answer {
+  font-size: 22px;
+}
+
+.navform {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 15px;
+}
+
+p {
+  font-family: Myfont;
+}
+
+#h22 {
+  font-family: Myfont;
+  font-weight: normal;
+}
+
+.div-qu:hover {
+  background-color: lightsteelblue;
+}
+
+#footerr {
+  width: 100%;
+  height: 50px;
+  background-color: darkgray;
+  color: #fff;
+}
+
+#footerr p {
+  text-align: center;
+  line-height: 50px;
+  font-family: roboto;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .div-center {
+    height: 430px;
+  }
+  .divbut .but-qu {
+    font-size: 10px;
+    width: 70px;
+    height: 50px;
+  }
+  #all-quition {
+    height: 270px;
+  }
+  .div-qu {
+    height: 45px;
+  }
+  .answer {
+    font-size: 15px;
+  }
+  #quition-text {
+    font-size: 20px;
+  }
+  .div-center {
+    height: 500px;
+  }
+  .navform {
+    height: 80px;
+  }
+  .navform p {
+    font-size: 12px;
+  }
+  .navform #h22 {
+    font-size: 17px;
+    margin-top: 20px;
+  }
+  #footerr {
+    height: 38px;
+  }
+  #footerr p {
+    line-height: 38px;
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
