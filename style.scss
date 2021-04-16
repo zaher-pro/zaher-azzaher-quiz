@@ -1,117 +1,113 @@
-$color_div_q: rgba(196, 196, 196, 0.6);
-$border_color_q: 17px;
-$body_color: rgba(221, 221, 221, 0.527);
-$font_first: url("fonts/HelveticaRoundedLTStd-Bd.otf");
-@font-face {
-	font-family: Myfont;
-	src: $font_first;
-}
 * {
 	box-sizing: border-box;
-	margin: 0;
 	padding: 0;
+	margin: 0;
 }
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+
 body {
-	background-color: rgba(136, 136, 136, 0.88);
+	font-size: 20px;
+	font-family: 'Work Sans', sans-serif;
+	color: #333;
+	font-weight: 300;
+	text-align: center;
+	background-color: #f8f6f0;
 }
-#all {
-	width: 80%;
+@font-face {
+	font-family: zaherfont;
+	src: url('HelveticaRoundedLTStd-Bd.otf');
+}
+h1 {
+	font-weight: 200;
+	margin: 0px;
+	padding: 10px;
+	font-size: 30px;
+	background-color: #444;
+	color: #fff;
+	font-family: zaherfont;
+}
+.all {
+	width: 85%;
 	margin: 0 auto;
 	background-color: #fff;
+	height: 100vh;
+	position: relative;
 }
-#all-quition {
-	width: 100%;
-	height: 400px;
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	flex-direction: column;
+.question {
+	font-size: 30px;
+	margin-bottom: 20px;
+	font-family: zaherfont;
 }
-.divbut {
-	width: 100%;
-	height: 60px;
-	display: flex;
-	justify-content: space-between;
-	padding: 0 50px;
-    a {
-        text-decoration: none;
-    }
-	.but-qu {
-		width: 150px;
-		height: 80px;
-		cursor: pointer;
-		border: none;
-		background-color: black;
-		color: white;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 15px;
-	}
-	.but-qu:hover {
-		background-color: $color_div_q;
-		color: black;
-		border: 1px solid black;
-	}
-	#but-left {
-		clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
-	}
-	#but-right {
-		padding-right: 8px;
-		clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-	}
+.answers {
+	margin-bottom: 20px;
+	text-align: left;
+	display: inline-block;
+	margin-top: 20px;
 }
-.div-center {
-	width: 100%;
-	height: 600px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.answers label {
+	display: block;
+	margin-bottom: 10px;
 }
-#quition-text {
-	font-size: 35px;
-	width: 80%;
-	height: 100px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-.div-qu {
-	background-color: $color_div_q;
-	width: 60%;
-	height: 80px;
-	border-radius: $border_color_q;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-}
-.answer {
+
+button {
+	font-family: 'Work Sans', sans-serif;
 	font-size: 22px;
+	// background-color: #279;
+	color: #fff;
+	border: none;
+	border-radius: 15px 30px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
 }
-.navform {
+button:hover {
+	background-color: #333;
+}
+button {
+	background-color: #38a;
+	transition: 0.2s ease-in;
+}
+.butt {
+	font-weight: bold;
+}
+.slide {
+	position: absolute;
+	left: 0px;
+	top: 0px;
 	width: 100%;
-	height: 100px;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+.active-slide {
+	opacity: 1;
+	z-index: 2;
+}
+.quiz-container {
+	position: relative;
+	height: 200px;
+	margin-top: 40px;
+}
+.allbut {
+	width: 100%;
 	display: flex;
+	align-items: center;
 	justify-content: space-around;
-	padding-top: 20px;
+	margin-top: 60px;
 }
-p {
-	font-family: Myfont;
+#results {
+	font-size: 30px;
 }
-#h22 {
-	font-family: Myfont;
-	font-weight: normal;
-}
-.div-qu:hover {
-	background-color: lightsteelblue;
+body {
+	background-color: rgb(184, 184, 184);
 }
 #footerr {
 	width: 100%;
 	height: 50px;
 	background-color: #4d4d4d;
 	color: #fff;
+	bottom: 0px;
+	position: absolute;
 	p {
 		text-align: center;
 		line-height: 50px;
@@ -120,97 +116,16 @@ p {
 	}
 }
 
-#all-cont {
-	background-color: #fff;
-	width: 30%;
-	height: 450px;
-	margin: 0 auto;
-	clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-	transform: translateY(100px);
-	#div-info-login {
-		width: 100%;
-		height: 80%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-evenly;
-		h2 {
-			font-family: Arial, Helvetica, sans-serif;
-		}
-		input {
-			width: 175px;
-			height: 30px;
-		}
-		#label-text {
-			font-family: roboto;
-		}
-        a {
-                text-decoration: none;
-        }
-		#Entre {
-			width: 150px;
-			height: 60px;
-			cursor: pointer;
-            border: none;
-            background-color: rgb(43, 43, 43);
-            color: white;
-            font-size: 14px;
-            letter-spacing: 1px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            padding-right: 16px;
-			clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-		}
-        #Entre:hover {
-            background-color: darkgray;
-		color: black;
-        }
-	}
-}
-
 @media screen and (max-width: 500px) {
-    #all-cont {
-        width: 79%;
-        height: 350px;
-        #div-info-login {
-            height: 75%;
-        }
-    }
-	.div-center {
-		height: 430px;
+	.butt {
+		padding: 0;
+		font-size: 13px;
+		width: 140px;
+		height: 40px;
+		font-weight: bold;
 	}
-	.divbut .but-qu {
-		font-size: 10px;
-		width: 70px;
-		height: 50px;
-	}
-	#all-quition {
-		height: 270px;
-	}
-	.div-qu {
-		height: 45px;
-	}
-	.answer {
-		font-size: 15px;
-	}
-	#quition-text {
+	.question {
 		font-size: 20px;
-	}
-	.div-center {
-		height: 500px;
-	}
-
-	.navform {
-		height: 80px;
-		p {
-			font-size: 12px;
-		}
-		#h22 {
-			font-size: 17px;
-			margin-top: 20px;
-		}
 	}
 
 	#footerr {
@@ -219,5 +134,24 @@ p {
 			line-height: 38px;
 			font-size: 12px;
 		}
+	}
+	.all {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	#results {
+		font-size: 25px;
+	}
+	h1 {
+		width: 100%;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		font-size: 25px;
+		padding: 0;
+	}
+	#footerr {
+		position: initial;
 	}
 }
